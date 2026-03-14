@@ -10,7 +10,9 @@
   "rolling_resistance": 0.005,
   "_cr_note": "Typical values: 0.003 racing slicks, 0.004 road tyres, 0.008 gravel.",
 
-  "wheel_circumference_m": 2.096,
+  #"wheel_circumference_m": 2.096,
+  "wheel_size": "700c",
+  "tire_size": 28,
   "_wheel_note": "700c × 25mm ≈ 2.096 m. Measure your own or use an online calculator.",
 
   "chainrings": [34, 50],
