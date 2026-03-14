@@ -17,11 +17,7 @@ import argparse
 import json
 from physics import simulate, power_for_time, route_stats
 from parsegpx import load_route
-from formatters import (
-    watts_output,
-    print_time_output,
-    parse_time,
-)
+from formatters import watts_output, print_time_output, parse_time
 
 
 # ── Config ────────────────────────────────────────────────────────────────────
