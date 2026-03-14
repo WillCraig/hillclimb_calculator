@@ -71,6 +71,19 @@ def simulate(segments: list[dict], power_w: float, config: dict) -> tuple[float,
     return total_time, avg_speed
 
 
+def power_for_speed(segments: list[dict], target_ms: float, config: dict) -> float:
+    """Binary-search for the constant power that produces the target average speed."""
+    lo, hi = 1.0, 3000.0
+    for _ in range(60):
+        mid = (lo + hi) / 2.0
+        _, speed = simulate(segments, mid, config)
+        if speed < target_ms:
+            lo = mid
+        else:
+            hi = mid
+    return (lo + hi) / 2.0
+
+
 def power_for_time(segments: list[dict], target_s: float, config: dict) -> float:
     """
     Binary-search for the constant power output that makes the ride finish
