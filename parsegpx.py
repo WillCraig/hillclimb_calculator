@@ -1,12 +1,8 @@
-import argparse
-import json
 import math
 import sys
 import xml.etree.ElementTree as ET
 from dataclasses import dataclass
 from typing import Optional
-
-from physics import simulate, power_for_time, gear_table, route_stats
 
 # ── GPX parsing ───────────────────────────────────────────────────────────────
 
