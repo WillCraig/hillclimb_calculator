@@ -15,6 +15,8 @@ Usage:
 
 import argparse
 import json
+import math
+import sys
 from physics import simulate, power_for_time, route_stats
 from parsegpx import load_route
 from formatters import watts_output, print_time_output, parse_time
@@ -23,9 +25,29 @@ from formatters import watts_output, print_time_output, parse_time
 # ── Config ────────────────────────────────────────────────────────────────────
 
 
+# ISO bead seat diameters (mm) for common wheel sizes
+_WHEEL_BSD_MM = {
+    "700c": 622,
+    "29":   622,
+    "650b": 584,
+    "27.5": 584,
+}
+
+
 def load_config(path: str) -> dict:
     with open(path) as f:
-        return json.load(f)
+        cfg = json.load(f)
+    if "wheel_circumference_m" not in cfg:
+        size = str(cfg.get("wheel_size", "")).strip().lower()
+        if size not in _WHEEL_BSD_MM:
+            sys.exit(
+                f"Unknown wheel_size '{size}'. "
+                f"Use one of: {', '.join(_WHEEL_BSD_MM)}"
+            )
+        bsd_mm = _WHEEL_BSD_MM[size]
+        width_mm = float(cfg["tire_width_mm"])
+        cfg["wheel_circumference_m"] = math.pi * (bsd_mm + 2 * width_mm) / 1000
+    return cfg
 
 
 # ── Commands ──────────────────────────────────────────────────────────────────
