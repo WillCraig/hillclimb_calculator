@@ -6,7 +6,6 @@ import math
 import os
 
 import pandas as pd
-import plotly.graph_objects as go
 import streamlit as st
 
 from formatters import fmt_time
@@ -219,23 +218,9 @@ with tab_profile:
     for i in range(1, len(points)):
         cum_dist.append(cum_dist[-1] + haversine(points[i - 1], points[i]) / 1000)
 
-    fig = go.Figure(
-        go.Scatter(
-            x=cum_dist,
-            y=smoothed,
-            mode="lines",
-            fill="tozeroy",
-            line=dict(color="#1f77b4", width=2),
-        )
-    )
-    fig.update_layout(
-        xaxis_title="Distance (km)",
-        yaxis_title="Elevation (m)",
-        margin=dict(l=0, r=0, t=8, b=0),
-        height=320,
-        showlegend=False,
-    )
-    st.plotly_chart(fig, use_container_width=True)
+    profile_df = pd.DataFrame({"Elevation (m)": smoothed}, index=cum_dist)
+    profile_df.index.name = "Distance (km)"
+    st.area_chart(profile_df)
 
 with tab_code:
     chosen = st.selectbox("File", list(SOURCE_FILES.keys()))
