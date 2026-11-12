@@ -107,6 +107,32 @@ The CLI reads `config.json` in the working directory (or the file given by `--co
 
 You can instead set `wheel_circumference_m` directly and omit `wheel_size`/`tire_width_mm`.
 
+## Gear presets
+
+`config.json` is plain JSON, so it cannot carry comments listing other
+gear sizes. Common sizes live in the reference file
+[`gear_presets.json`](gear_presets.json) instead. Nothing reads that
+file at runtime: copy a preset's `cogs` list into `cassette` and a
+preset's `chainrings` list into `chainrings` in `config.json` (or paste
+the numbers into the Streamlit sidebar).
+
+Cassettes covered, cog by cog:
+
+- Shimano road: 12-speed 11-30 and 11-34; 11-speed 11-28, 11-30, and
+  11-32; plus the 11-speed 11-34 (CS-HG800-11) often paired with GRX
+- Shimano MTB/gravel: 12-speed 10-45 and 10-51 (Deore XT, Micro Spline)
+- SRAM road: 12-speed 10-28, 10-33, and 10-36 (XDR)
+- SRAM MTB: Eagle 12-speed 10-50 and 10-52 (XD)
+
+Chainrings covered: Shimano road doubles 54/40, 52/36, and 50/34; GRX
+48/31, 46/30, and 1x 40T/42T; Shimano MTB 1x 30T/32T/34T; SRAM road
+doubles 50/37, 48/35, 46/33, and 43/30 Wide; SRAM 1x road/gravel
+40T/42T/44T and Eagle MTB 1x 32T/34T.
+
+Only well-known, manufacturer-published ranges are listed. If your exact
+cassette is not there, count the teeth on yours and type them into
+`config.json` in ascending order — the model only needs the tooth counts.
+
 ## Project files
 
 | File | Purpose |
