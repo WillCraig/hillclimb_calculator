@@ -1,0 +1,151 @@
+{
+  "_comment": "Reference data only. Nothing reads this file at runtime: main.py and app.py use config.json / the Streamlit sidebar. Copy a preset's \"cogs\" list into \"cassette\" in config.json, and a preset's \"chainrings\" list into \"chainrings\" in config.json (or paste the numbers into the Streamlit sidebar).",
+  "_note": "Only common, manufacturer-published ranges are listed. Cog-by-cog counts are given so the lists can be copied as-is; if your exact cassette is not here, count the teeth on yours and type them in ascending order.",
+
+  "cassettes": {
+    "shimano_road_12s_11_30": {
+      "label": "Shimano road 12-speed 11-30 (Dura-Ace CS-R9200 / Ultegra CS-R8100 / 105 CS-R7100)",
+      "speeds": 12,
+      "cogs": [11, 12, 13, 14, 15, 16, 17, 19, 21, 24, 27, 30]
+    },
+    "shimano_road_12s_11_34": {
+      "label": "Shimano road 12-speed 11-34 (Dura-Ace CS-R9200 / Ultegra CS-R8100 / 105 CS-R7100)",
+      "speeds": 12,
+      "cogs": [11, 12, 13, 14, 15, 17, 19, 21, 24, 27, 30, 34]
+    },
+    "shimano_road_11s_11_28": {
+      "label": "Shimano road 11-speed 11-28 (Ultegra CS-R8000 / 105 CS-R7000)",
+      "speeds": 11,
+      "cogs": [11, 12, 13, 14, 15, 17, 19, 21, 23, 25, 28]
+    },
+    "shimano_road_11s_11_30": {
+      "label": "Shimano road 11-speed 11-30 (Ultegra CS-R8000 / 105 CS-R7000)",
+      "speeds": 11,
+      "cogs": [11, 12, 13, 14, 15, 17, 19, 21, 24, 27, 30]
+    },
+    "shimano_road_11s_11_32": {
+      "label": "Shimano road 11-speed 11-32 (Ultegra CS-R8000 / 105 CS-R7000)",
+      "speeds": 11,
+      "cogs": [11, 12, 13, 14, 16, 18, 20, 22, 25, 28, 32]
+    },
+    "shimano_gravel_11s_11_34": {
+      "label": "Shimano 11-speed 11-34 (CS-HG800-11, commonly paired with GRX 11-speed)",
+      "speeds": 11,
+      "cogs": [11, 13, 15, 17, 19, 21, 23, 25, 27, 30, 34]
+    },
+    "shimano_mtb_12s_10_45": {
+      "label": "Shimano MTB/gravel 12-speed 10-45 (Deore XT CS-M8100, Micro Spline)",
+      "speeds": 12,
+      "cogs": [10, 12, 14, 16, 18, 21, 24, 28, 32, 36, 40, 45]
+    },
+    "shimano_mtb_12s_10_51": {
+      "label": "Shimano MTB 12-speed 10-51 (Deore XT CS-M8100, Micro Spline)",
+      "speeds": 12,
+      "cogs": [10, 12, 14, 16, 18, 21, 24, 28, 33, 39, 45, 51]
+    },
+    "sram_road_12s_10_28": {
+      "label": "SRAM road 12-speed 10-28 (RED XG-1290 / Force XG-1270, XDR)",
+      "speeds": 12,
+      "cogs": [10, 11, 12, 13, 14, 15, 16, 17, 19, 21, 24, 28]
+    },
+    "sram_road_12s_10_33": {
+      "label": "SRAM road 12-speed 10-33 (RED XG-1290 / Force XG-1270, XDR)",
+      "speeds": 12,
+      "cogs": [10, 11, 12, 13, 14, 15, 17, 19, 21, 24, 28, 33]
+    },
+    "sram_road_12s_10_36": {
+      "label": "SRAM road 12-speed 10-36 (Force XG-1270, XDR)",
+      "speeds": 12,
+      "cogs": [10, 11, 12, 13, 15, 17, 19, 21, 24, 28, 32, 36]
+    },
+    "sram_mtb_12s_10_50": {
+      "label": "SRAM Eagle MTB 12-speed 10-50 (GX/X01/XX1 Eagle XG-1275/XG-1295/XG-1299, XD)",
+      "speeds": 12,
+      "cogs": [10, 12, 14, 16, 18, 21, 24, 28, 32, 36, 42, 50]
+    },
+    "sram_mtb_12s_10_52": {
+      "label": "SRAM Eagle MTB 12-speed 10-52 (GX/X01/XX1 Eagle XG-1275/XG-1295/XG-1299, XD)",
+      "speeds": 12,
+      "cogs": [10, 12, 14, 16, 18, 21, 24, 28, 32, 36, 42, 52]
+    }
+  },
+
+  "chainrings": {
+    "shimano_road_54_40": {
+      "label": "Shimano road 2x 54/40 (Dura-Ace FC-R9200 / Ultegra FC-R8100 option)",
+      "chainrings": [40, 54]
+    },
+    "shimano_road_52_36": {
+      "label": "Shimano road 2x 52/36 semi-compact (Dura-Ace/Ultegra/105)",
+      "chainrings": [36, 52]
+    },
+    "shimano_road_50_34": {
+      "label": "Shimano road 2x 50/34 compact (Ultegra/105; the chainrings in the sample config.json)",
+      "chainrings": [34, 50]
+    },
+    "shimano_grx_48_31": {
+      "label": "Shimano GRX 2x 48/31 (FC-RX810 / FC-RX820)",
+      "chainrings": [31, 48]
+    },
+    "shimano_grx_46_30": {
+      "label": "Shimano GRX 2x 46/30 (FC-RX600)",
+      "chainrings": [30, 46]
+    },
+    "shimano_grx_1x_40": {
+      "label": "Shimano GRX 1x 40T (FC-RX810-1 option)",
+      "chainrings": [40]
+    },
+    "shimano_grx_1x_42": {
+      "label": "Shimano GRX 1x 42T (FC-RX810-1 / FC-RX820-1 option)",
+      "chainrings": [42]
+    },
+    "shimano_mtb_1x_30": {
+      "label": "Shimano MTB 1x 30T (Deore XT FC-M8100 option)",
+      "chainrings": [30]
+    },
+    "shimano_mtb_1x_32": {
+      "label": "Shimano MTB 1x 32T (Deore XT FC-M8100 option)",
+      "chainrings": [32]
+    },
+    "shimano_mtb_1x_34": {
+      "label": "Shimano MTB 1x 34T (Deore XT FC-M8100 option)",
+      "chainrings": [34]
+    },
+    "sram_road_50_37": {
+      "label": "SRAM road 2x 50/37 (RED/Force AXS option)",
+      "chainrings": [37, 50]
+    },
+    "sram_road_48_35": {
+      "label": "SRAM road 2x 48/35 (RED/Force/Rival AXS)",
+      "chainrings": [35, 48]
+    },
+    "sram_road_46_33": {
+      "label": "SRAM road 2x 46/33 (Force AXS option)",
+      "chainrings": [33, 46]
+    },
+    "sram_road_wide_43_30": {
+      "label": "SRAM road/gravel 2x 43/30 Wide (Force/Rival AXS Wide)",
+      "chainrings": [30, 43]
+    },
+    "sram_1x_40": {
+      "label": "SRAM 1x road/gravel 40T (Force/Rival 1x and XPLR builds)",
+      "chainrings": [40]
+    },
+    "sram_1x_42": {
+      "label": "SRAM 1x road/gravel 42T (Force/Rival 1x and XPLR builds)",
+      "chainrings": [42]
+    },
+    "sram_1x_44": {
+      "label": "SRAM 1x road/gravel 44T (Force/Rival 1x option)",
+      "chainrings": [44]
+    },
+    "sram_mtb_1x_32": {
+      "label": "SRAM Eagle MTB 1x 32T (common stock Eagle size)",
+      "chainrings": [32]
+    },
+    "sram_mtb_1x_34": {
+      "label": "SRAM Eagle MTB 1x 34T (common stock Eagle size)",
+      "chainrings": [34]
+    }
+  }
+}

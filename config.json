@@ -16,5 +16,6 @@
   "_wheel_note": "Circumference is calculated from wheel size and tire width.",
 
   "chainrings": [34, 50],
-  "cassette": [11, 13, 15, 17, 19, 21, 24, 28, 32]
+  "cassette": [11, 13, 15, 17, 19, 21, 24, 28, 32],
+  "_gear_note": "Common Shimano/SRAM cassette and chainring sizes to copy in are listed in gear_presets.json (see the Gear presets section of README.md)."
 }
